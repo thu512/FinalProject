@@ -1,0 +1,136 @@
+[2016-12-17 00:32] new client connected, socketid:995bff436d694709995b04254305d8cc
+[2016-12-17 00:32] client join chat, clientid: kjs, socketid: 995bff436d694709995b04254305d8cc
+[2016-12-17 00:32] client disconnect, socketid: 995bff436d694709995b04254305d8cc
+[2016-12-17 00:32] new client connected, socketid:1606797873f149059ae36219fb3cdb00
+[2016-12-17 00:32] client join chat, clientid: kjs, socketid: 1606797873f149059ae36219fb3cdb00
+[2016-12-17 00:33] client disconnect, socketid: 1606797873f149059ae36219fb3cdb00
+[2016-12-17 00:33] new client connected, socketid:3e2e0bd1c17441bd945b41ae06dc515f
+[2016-12-17 00:33] client join chat, clientid: kjs, socketid: 3e2e0bd1c17441bd945b41ae06dc515f
+[2016-12-17 00:34] new client connected, socketid:0283c68200df4cc188ae5e75b3dba84e
+[2016-12-17 00:34] client join chat, clientid: hjm, socketid: 0283c68200df4cc188ae5e75b3dba84e
+[2016-12-17 00:34] new client connected, socketid:5473cbf679d24ec99d7a038000bc660f
+[2016-12-17 00:34] client join chat, clientid: kjs, socketid: 5473cbf679d24ec99d7a038000bc660f
+[2016-12-17 00:34] client disconnect, socketid: 5473cbf679d24ec99d7a038000bc660f
+[2016-12-17 00:34] new client connected, socketid:86eb80f162be47df9ec72f86f68a372c
+[2016-12-17 00:34] client join chat, clientid: lcj, socketid: 86eb80f162be47df9ec72f86f68a372c
+[2016-12-17 00:34] client input message id: lcj, socketid: 86eb80f162be47df9ec72f86f68a372c, message: 안녕
+[2016-12-17 00:34] client input message id: hjm, socketid: 0283c68200df4cc188ae5e75b3dba84e, message: 안녕
+[2016-12-17 00:35] client disconnect, socketid: 0283c68200df4cc188ae5e75b3dba84e
+[2016-12-17 00:35] new client connected, socketid:e5a478f2b5624d46aca73bfedfa01a36
+[2016-12-17 00:35] client join chat, clientid: hjm, socketid: e5a478f2b5624d46aca73bfedfa01a36
+[2016-12-17 00:36] client disconnect, socketid: 86eb80f162be47df9ec72f86f68a372c
+[2016-12-17 00:36] client disconnect, socketid: e5a478f2b5624d46aca73bfedfa01a36
+[2016-12-17 00:36] client disconnect, socketid: 3e2e0bd1c17441bd945b41ae06dc515f
+[2016-12-17 21:36] new client connected, socketid:58200e5b198f453b87ee9bd4971e3942
+[2016-12-17 21:36] client join chat, clientid: lcj, socketid: 58200e5b198f453b87ee9bd4971e3942
+[2016-12-17 21:36] client disconnect, socketid: 58200e5b198f453b87ee9bd4971e3942
+[2016-12-17 21:37] new client connected, socketid:389b34faa6124bc9b7e2b75c2710407c
+[2016-12-17 21:37] client join chat, clientid: lcj, socketid: 389b34faa6124bc9b7e2b75c2710407c
+[2016-12-17 21:37] client disconnect, socketid: 389b34faa6124bc9b7e2b75c2710407c
+[2016-12-17 21:37] new client connected, socketid:79edfd272a62407f93d3dce14a55f985
+[2016-12-17 21:37] client join chat, clientid: lcj, socketid: 79edfd272a62407f93d3dce14a55f985
+[2016-12-17 21:37] client disconnect, socketid: 79edfd272a62407f93d3dce14a55f985
+[2016-12-17 21:38] new client connected, socketid:34cc970ab21541f184885c83dc46943f
+[2016-12-17 21:38] client join chat, clientid: lcj, socketid: 34cc970ab21541f184885c83dc46943f
+[2016-12-17 21:38] client disconnect, socketid: 34cc970ab21541f184885c83dc46943f
+[2016-12-17 21:41] new client connected, socketid:34c951e8de2c4f62819467ee43ed4fb1
+[2016-12-17 21:41] client join chat, clientid: lcj, socketid: 34c951e8de2c4f62819467ee43ed4fb1
+[2016-12-17 21:41] client disconnect, socketid: 34c951e8de2c4f62819467ee43ed4fb1
+[2016-12-17 22:04] new client connected, socketid:e3b2aed4d42043f1ad23643ed73b4035
+[2016-12-17 22:04] client join chat, clientid: qwe, socketid: e3b2aed4d42043f1ad23643ed73b4035
+[2016-12-17 22:05] new client connected, socketid:e6b7fac6a4114a35b7aafa47b5bd2c59
+[2016-12-17 22:05] client join chat, clientid: lcj, socketid: e6b7fac6a4114a35b7aafa47b5bd2c59
+[2016-12-17 22:05] client disconnect, socketid: e6b7fac6a4114a35b7aafa47b5bd2c59
+[2016-12-17 22:05] new client connected, socketid:5a7550b39b9947d4b0f07c2ae39b03ad
+[2016-12-17 22:05] client disconnect, socketid: e3b2aed4d42043f1ad23643ed73b4035
+[2016-12-17 22:05] new client connected, socketid:7c98b4d686884a0bb9ace7faf009472d
+[2016-12-17 22:05] client join chat, clientid: qwe, socketid: 7c98b4d686884a0bb9ace7faf009472d
+[2016-12-17 22:06] client disconnect, socketid: 7c98b4d686884a0bb9ace7faf009472d
+[2016-12-17 22:06] new client connected, socketid:d5504e04f3c24ae19de9acf13233bdc4
+[2016-12-17 22:06] client join chat, clientid: qwe, socketid: d5504e04f3c24ae19de9acf13233bdc4
+[2016-12-17 22:06] client disconnect, socketid: d5504e04f3c24ae19de9acf13233bdc4
+[2016-12-17 22:06] new client connected, socketid:2899f05ae0784a5eac3ee3e4710da371
+[2016-12-17 22:06] new client connected, socketid:bafd27b2f6074f42bd88d43ecafbf9be
+[2016-12-17 22:06] client join chat, clientid: qwe, socketid: bafd27b2f6074f42bd88d43ecafbf9be
+[2016-12-17 22:06] client disconnect, socketid: bafd27b2f6074f42bd88d43ecafbf9be
+[2016-12-17 22:06] new client connected, socketid:05e129dc1d3949dabdb72d16790bba06
+[2016-12-17 22:06] client join chat, clientid: qwe, socketid: 05e129dc1d3949dabdb72d16790bba06
+[2016-12-17 22:06] client disconnect, socketid: 05e129dc1d3949dabdb72d16790bba06
+[2016-12-18 15:58] new client connected, socketid:08b5bb582a8a4db685208c9741da8ae0
+[2016-12-18 15:58] client join chat, clientid: hjm, socketid: 08b5bb582a8a4db685208c9741da8ae0
+[2016-12-18 15:58] new client connected, socketid:f2066c2ed8e34679936e34dcf03ef373
+[2016-12-18 15:58] client join chat, clientid: lcj, socketid: f2066c2ed8e34679936e34dcf03ef373
+[2016-12-18 15:58] client input message id: hjm, socketid: 08b5bb582a8a4db685208c9741da8ae0, message: ㅎㅇ
+[2016-12-18 15:58] client input message id: lcj, socketid: f2066c2ed8e34679936e34dcf03ef373, message: 너야말로
+[2016-12-18 15:58] client input message id: hjm, socketid: 08b5bb582a8a4db685208c9741da8ae0, message: 안녕 프랑스인
+[2016-12-18 15:58] client input message id: lcj, socketid: f2066c2ed8e34679936e34dcf03ef373, message: 님아
+[2016-12-18 15:58] client input message id: hjm, socketid: 08b5bb582a8a4db685208c9741da8ae0, message: 네
+[2016-12-18 15:59] new client connected, socketid:036bf3abe8704c8089fef0c2886f2b8f
+[2016-12-18 15:59] client join chat, clientid: kjs, socketid: 036bf3abe8704c8089fef0c2886f2b8f
+[2016-12-18 16:00] client input message id: lcj, socketid: f2066c2ed8e34679936e34dcf03ef373, message: dgd
+[2016-12-18 16:00] client input message id: kjs, socketid: 036bf3abe8704c8089fef0c2886f2b8f, message: 안녕하세요~
+[2016-12-18 16:00] client disconnect, socketid: 036bf3abe8704c8089fef0c2886f2b8f
+[2016-12-18 16:00] client input message id: hjm, socketid: 08b5bb582a8a4db685208c9741da8ae0, message: ㅎㅇㅎㅇ
+[2016-12-18 16:02] client disconnect, socketid: f2066c2ed8e34679936e34dcf03ef373
+[2016-12-18 16:02] client disconnect, socketid: 08b5bb582a8a4db685208c9741da8ae0
+[2016-12-18 16:06] new client connected, socketid:ed9bee456a274bdcb3d578007549b87f
+[2016-12-18 16:06] client join chat, clientid: kth, socketid: ed9bee456a274bdcb3d578007549b87f
+[2016-12-18 16:07] new client connected, socketid:269813b4fa494447b6c86f5dbd147ed5
+[2016-12-18 16:07] client join chat, clientid: hjm, socketid: 269813b4fa494447b6c86f5dbd147ed5
+[2016-12-18 16:07] new client connected, socketid:13530ba916c044b296978c0e288eec44
+[2016-12-18 16:07] client join chat, clientid: lcj, socketid: 13530ba916c044b296978c0e288eec44
+[2016-12-18 16:08] client input message id: kth, socketid: ed9bee456a274bdcb3d578007549b87f, message: gd
+[2016-12-18 16:08] client disconnect, socketid: ed9bee456a274bdcb3d578007549b87f
+[2016-12-18 16:08] new client connected, socketid:74677c7b982a496483002dec6b6b395f
+[2016-12-18 16:08] client join chat, clientid: kth, socketid: 74677c7b982a496483002dec6b6b395f
+[2016-12-18 16:08] client disconnect, socketid: 13530ba916c044b296978c0e288eec44
+[2016-12-18 16:08] new client connected, socketid:7143a60c857a4cf6a8cd612606fbeef5
+[2016-12-18 16:08] client join chat, clientid: lcj, socketid: 7143a60c857a4cf6a8cd612606fbeef5
+[2016-12-18 16:09] new client connected, socketid:b08425e43b574b919cf956ee46018f27
+[2016-12-18 16:09] new client connected, socketid:466f52a0dd0c4390966141655e07db05
+[2016-12-18 16:09] new client connected, socketid:5c8aa7c9790646349487dc008bf5fbdd
+[2016-12-18 16:09] new client connected, socketid:b9e60e6452f84d58b553e5a50bcf6202
+[2016-12-18 16:09] new client connected, socketid:9f0d2aa39475486487bbc67f6028cc29
+[2016-12-18 16:09] new client connected, socketid:dcc88672b3b745e1b34d621605c09f6e
+[2016-12-18 16:09] new client connected, socketid:f36e1c7dcb5442a2b8bb644d67e13810
+[2016-12-18 16:09] client join chat, clientid: lcj, socketid: f36e1c7dcb5442a2b8bb644d67e13810
+[2016-12-18 16:10] new client connected, socketid:b55286b2d0804d66ab3efad903773d27
+[2016-12-18 16:10] client join chat, clientid: kth, socketid: b55286b2d0804d66ab3efad903773d27
+[2016-12-18 16:11] new client connected, socketid:5efb3d2314604c109cbec1063d8a875e
+[2016-12-18 16:11] client join chat, clientid: kjs, socketid: 5efb3d2314604c109cbec1063d8a875e
+[2016-12-18 16:13] client input message id: kth, socketid: b55286b2d0804d66ab3efad903773d27, message: gd
+[2016-12-18 16:14] client disconnect, socketid: f36e1c7dcb5442a2b8bb644d67e13810
+[2016-12-18 16:14] client disconnect, socketid: b55286b2d0804d66ab3efad903773d27
+[2016-12-18 16:14] new client connected, socketid:b3601d0028584bdb9219e5013349a5b1
+[2016-12-18 16:14] client disconnect, socketid: 5efb3d2314604c109cbec1063d8a875e
+[2016-12-18 16:38] new client connected, socketid:fd66a680ac284ca385f2cdb6bfcc857b
+[2016-12-18 16:38] client join chat, clientid: lcj, socketid: fd66a680ac284ca385f2cdb6bfcc857b
+[2016-12-18 16:38] client input message id: lcj, socketid: fd66a680ac284ca385f2cdb6bfcc857b, message: asd
+[2016-12-18 16:49] new client connected, socketid:07f713bb175d4f33a655223ae4ca9932
+[2016-12-18 16:49] client join chat, clientid: lcj, socketid: 07f713bb175d4f33a655223ae4ca9932
+[2016-12-18 16:49] client input message id: lcj, socketid: 07f713bb175d4f33a655223ae4ca9932, message: &lt;h1>das&lt;/h1>
+[2016-12-18 16:49] client input message id: lcj, socketid: 07f713bb175d4f33a655223ae4ca9932, message: &lt;script>alert(&quot;dasd&quot;);&lt;/script>
+[2016-12-18 18:10] new client connected, socketid:d34eab74842b43459427de5f59bd8159
+[2016-12-18 18:10] new client connected, socketid:c824a2a5b52e4349827b6cea19d17566
+[2016-12-18 19:16] new client connected, socketid:5e5f84034ba14e6cb6da1da5fffeb6c0
+[2016-12-18 19:26] new client connected, socketid:da565a9ab8264b7cb686b431f969fa14
+[2016-12-18 19:31] new client connected, socketid:83576f4b5c6746608bf6a672f1911f40
+[2016-12-18 19:31] client join chat, clientid: hjm, socketid: 83576f4b5c6746608bf6a672f1911f40
+[2016-12-18 19:31] client disconnect, socketid: 83576f4b5c6746608bf6a672f1911f40
+[2016-12-18 19:32] new client connected, socketid:28b323349c7f4626b5cdae9de98c9929
+[2016-12-18 19:32] client join chat, clientid: kth, socketid: 28b323349c7f4626b5cdae9de98c9929
+[2016-12-18 19:32] client disconnect, socketid: 28b323349c7f4626b5cdae9de98c9929
+[2016-12-18 19:45] new client connected, socketid:aec4c36bbf1943e99001694ea93a4b1a
+[2016-12-18 19:45] client join chat, clientid: lcj, socketid: aec4c36bbf1943e99001694ea93a4b1a
+[2016-12-18 19:45] client disconnect, socketid: aec4c36bbf1943e99001694ea93a4b1a
+[2016-12-18 19:46] new client connected, socketid:e762d7fec20141c0b835005ae690f7db
+[2016-12-18 19:46] client join chat, clientid: lcj, socketid: e762d7fec20141c0b835005ae690f7db
+[2016-12-18 19:47] client disconnect, socketid: e762d7fec20141c0b835005ae690f7db
+[2016-12-18 19:48] new client connected, socketid:ec83063459a74ab7bf50faa9e10c38ae
+[2016-12-18 19:48] client join chat, clientid: lcj, socketid: ec83063459a74ab7bf50faa9e10c38ae
+[2016-12-18 19:48] new client connected, socketid:086364e9eb5243b4aa3b257552e53199
+[2016-12-18 19:48] client join chat, clientid: hjm, socketid: 086364e9eb5243b4aa3b257552e53199
+[2016-12-18 19:48] client input message id: hjm, socketid: 086364e9eb5243b4aa3b257552e53199, message: gd
+[2016-12-18 19:48] client input message id: lcj, socketid: ec83063459a74ab7bf50faa9e10c38ae, message: gdgd
+[2016-12-18 19:48] client disconnect, socketid: ec83063459a74ab7bf50faa9e10c38ae
+[2016-12-18 19:48] client disconnect, socketid: 086364e9eb5243b4aa3b257552e53199

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>socketio</title>
+
+        <!-- bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            #wrapper {height:200px;overflow:auto;}
+        </style>
+    </head>
+    <body>
+
+        <div class="container" style="margin-top: 50px;">
+
+            <!-- 채팅 입력 -->
+            <div class="row" id="listBox">
+                <div class="col-md-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">공개채팅</h3>
+                        </div>
+                        <div id="wrapper">
+                            <ul class="list-group" id="listMessage" style="height:100%;">
+                            </ul>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="message" name="message">
+                                    <button class="btn btn-success" type="button" id="btnMessage">확인</button>
+                                    <button class="btn btn-danger" type="button" id="btnLeave">나가기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">사용자목록</h3>
+                        </div>
+                        <ul class="list-group" id="userList">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jquery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+        <!-- bootstrap -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- socketio -->
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.1/socket.io.min.js"></script>
+        <!-- iscroll -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.js"></script>
+        <!-- custom -->
+        <script type="text/javascript" charset="utf-8">
+        //URL 파라미터 가져오기
+        $.extend({
+            getUrlVars: function(){
+                var vars = [], hash;
+                var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                    for(var i = 0; i < hashes.length; i++) {
+                        hash = hashes[i].split('=');
+                        vars.push(hash[0]);
+                        vars[hash[0]] = hash[1];
+                    }
+                return vars;
+            },
+            getUrlVar: function(name) {
+                return $.getUrlVars()[name];
+            }
+        });
+
+        //소캣 생성
+        var socket = io.connect('http://' + document.domain + ':' + location.port + '/');
+        var socketid = '';
+        socket.on('server, socketid', function(data) {
+            socketid = data['socketid'];
+            console.log('socketid: ' + data['socketid']);
+        });
+
+        //로그인 아이디 받아오기
+        var byName = $.getUrlVar('id');
+
+        //아이디 서버로 보냄
+            $(document).ready(function(){
+                if(byName==""){
+                    alert("비정상적인 접근입니다.");
+                    return false;
+                }
+                else{
+                    $('#listMessage').empty();
+                    socket.emit('client, join chat', {'name': byName});
+                }
+            });
+
+            //새로고침시 위의 함수 때문에 중복 로그인 되는것을 방지.
+            window.onbeforeunload = function() {
+                socket.emit('client, disconnect', {'socketid': socketid});
+                location.replace("http://127.0.0.1:5000/");
+                return "Bye now!";
+            };
+
+
+            // 채팅 입력 버튼
+            $('#btnMessage').click(function() {
+                if ( !$('#message').val() ) {
+                    alert('내용을 입력하세요.');
+                    $('#message').focus();
+                    return false;
+                } else {
+                    var data=$('#message').val();
+                    socket.emit('client, input message', {'name': byName, 'message': encodeHTML(data)});
+                    $('#message').val('');
+                    $('#message').focus();
+                }
+            });
+
+            // 나가기 버튼
+            $('#btnLeave').click(function() {
+                $('#name').val('');
+                $('#message').val('');
+                $('#userList').html('');
+                $('#messageList').html('');
+                $('#listBox').css('display', 'none');
+                socket.emit('client, disconnect', {'name': byName,'socketid': socketid});
+                location.replace("http://127.0.0.1:5000");
+            });
+
+            // 채팅방 접속
+            socket.on('server, join chat', function(data) {
+                var user_list = data['user_list'];
+                $('#userList').html('');
+                for(var index in user_list) {
+                    //채팅방 접속 리스트에 로그인시 사용 이미지 프로필사진으로 띄우기
+                    var img_path="{{ url_for('static', filename = 'loginTmp/') }}";
+                    console.log(img_path);
+                    $('#userList').append('<li class="list-group-item"><img src="'+img_path+user_list[index]+'.jpg" id="uploadPreview" class="img-thumbnail" onerror="this.src=\''+img_path+'temp.jpg\'" style="width: 50px; height: 50px; " />  &nbsp' + user_list[index] + '</li>');
+                }
+            });
+
+            // 새로운 사용자 입장
+            socket.on('server, new client', function(data) {
+                var now = new Date();
+                strNow = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+                $('#listMessage').append('<li class="list-group-item text-primary">[' + strNow + '] ' + data['name'] + '님이 입장하였습니다.</li>');
+
+            });
+
+
+            // 사용자 퇴장
+            socket.on('server, disconnect', function(data) {
+                var now = new Date();
+                strNow = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+                $('#listMessage').append('<li class="list-group-item text-danger">[' + strNow + '] ' + data['name'] + '님이 퇴장하였습니다.</li>');
+                scrollToBottom();
+            });
+
+
+            // 새로운 대화 보여주기
+            socket.on('server, input message', function(data) {
+                var now = new Date();
+                var strNow = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+                if(data['name']==byName){
+                    var message = '<li class="list-group-item" style="text-align:right">'
+                    + data['message'] + ' ['
+                    + data['name'] + '] [' + strNow + '] </li>'
+                $('#listMessage').append(message);
+                scrollToBottom();
+                }
+                else{
+                    var message = '<li class="list-group-item">['
+                    + strNow + '] ['
+                    + data['name'] + '] '
+                    + data['message'] + '</li>'
+                $('#listMessage').append(message);
+                scrollToBottom();
+                }
+            });
+
+
+            //채팅에 사용한 html 태그 작동 방지
+            function encodeHTML(s) {
+                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+            }
+
+            //스크롤 제일 아래 유지
+            function scrollToBottom() {
+                var obj=document.getElementById('wrapper');
+                obj.scrollTop=obj.scrollHeight;
+            }
+
+        </script>
+    </body>
+</html>

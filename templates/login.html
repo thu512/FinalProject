@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+<br><br>
+
+    <!--text로그인-->
+    <div class="container" id="text">
+        <div id="result"></div>
+        <form id="form_id" method="post">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    로그인
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label>아이디</label>
+                        <input type="text" class="form-control" id="id" name="id" placeholder="아이디를 입력하세요" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label>비밀번호</label>
+                        <input type="password" class="form-control" id="pw" name="pw" placeholder="비밀번호를 입력하세요">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-success" id="btn-login-id">로그인</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="btn-group navbar-right" role="group" aria-label="..." style="margin-right:5%;">
+            <button type="button" class="btn btn-warning" id="ch_login1">img로그인전환</button>
+            <button type="button" class="btn btn-danger" data-target="#layerpop" data-toggle="modal">회원가입</button>
+        </div>
+    </div>
+
+    <!--사진로그인 -->
+    <div class="container" id="picture" style="display: none">
+        <div id="result1"></div>
+        <form id="form_img" class="" method="post" enctype="multipart/form-data">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    로그인
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label>아이디</label>
+                        <input type="text" class="form-control" id="img_id" name="img_id" placeholder="아이디를 입력하세요"  autofocus>
+                    </div>
+                    <div class="form-group">
+                        <img id="uploadPreview" class="img-thumbnail" style="width: 200px; height: 200px; " />
+                    </div>
+                    <div class="form-group">
+                        <input type="file" id="img" name="img" class="filestyle form-control" data-buttonName="btn-primary" onchange="PreviewImage();" style="margin-top:10px; ">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-success" id="btn-login-img">로그인</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="btn-group navbar-right" role="group" aria-label="..." style="margin-right:5%;">
+            <button type="button" class="btn btn-warning" id="ch_login2">id로그인전환</button>
+            <button type="button" class="btn btn-danger" data-target="#layerpop" data-toggle="modal">회원가입</button>
+        </div>
+    </div>
+
+
+    <!--회원가입 모달창 -->
+    <div class="modal fade" id="layerpop" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- header -->
+                <div class="modal-header">
+                    <!-- 닫기(x) 버튼 -->
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <!-- header title -->
+                    <h4 class="modal-title">회원가입</h4>
+                </div>
+                <!-- body -->
+                <div class="modal-body">
+                    <form id="form" method="post" enctype="multipart/form-data">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                로그인
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label>ID</label>
+                                    <input type="text" class="form-control" id="signupid" name="id" placeholder="ID입력후 중복확인 해주세요." autofocus>
+                                    <br>
+                                    <button type="button" class="btn btn-danger" id="check">중복확인</button>
+                                </div>
+                                <div class="form-group">
+                                    <label>PW</label>
+                                    <input type="password" class="form-control" id="signuppw" name="pw" placeholder="PW를 입력하세요" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>본인사진등록(3장 이상 권장.)</label>
+                                    <p>1장만 등록하셔도 되나 인식률이 낮을 수 있습니다. </p>
+                                    <p>이미지 로그인을 사용하지 않으시려면 등록하지 않으셔도 됩니다.</p>
+                                    <div class="form-group" data-toggle="tooltip" data-placement="left" title="ctrl버튼 누른후 사진 여러장 클릭" >
+                                        <input type=file name="file[]" multiple class="filestyle" data-buttonName="btn-primary" placeholder="사진을 등록하세요">
+                                    </div>
+                                </div>
+                                <div class="form-group" id="tip" data-toggle="tooltip" data-placement="left" title="중복확인 하셨나요?" >
+                                    <button type="submit" class="btn btn-success" id="signup-id" disabled>회원가입</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="wait"></div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                            <span class="sr-only">0% Complete</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-filestyle/1.2.1/bootstrap-filestyle.js"></script>
+    <!--ajax로 사진 보낼때-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.js"></script>
+    <script>
+    <!--id/pw로그인 -->
+        $('#btn-login-id').click(function(){
+            $.ajax({
+                url: "/auth",
+                type:"post",
+                dataType: "JSON",
+                data: $("#form_id").serialize(),
+                success: function(data){
+                    console.log(data);
+                    if (data.status == "yes") {
+                        location.replace("http://127.0.0.1:5000/chat?id="+data.id);
+                    } else if(data.status == "no_id"){
+                        $('#result').html('<div class="alert alert-danger" role="alert">존재하지 않는 아이디 입니다.</div>');
+                        $('#id').val('');
+                    } else if(data.status == "no_pw"){
+                        $('#result').html('<div class="alert alert-danger" role="alert">비밀번호가 틀립니다.</div>');
+                        $('#pw').val('');
+                    }else if(data.status == "id_blank"){
+                        $('#result').html('<div class="alert alert-danger" role="alert">아이디를 입력해주세요.</div>');
+                        $('#id').focus();
+                    }else if(data.status == "pw_blank"){
+                        $('#result').html('<div class="alert alert-danger" role="alert">비밀번호를 입력해주세요.</div>');
+                        $('#pw').focus();
+                    }
+                    else{
+                        $('#result').html('<div class="alert alert-danger" role="alert">로그인 실패.</div>');
+                    }
+                }
+            })
+        });
+
+    <!--사진 로그인-->
+        $('#btn-login-img').click(function(){
+            var formData = new FormData($('#form_img')[0]);
+            $.ajax({
+                url: "/img",
+                type:"POST",
+                dataType: "JSON",
+                contentType: false,
+                processData: false,
+                data: formData,
+                success: function(data){
+                    console.log(data);
+                    if (data.status == "yes") {
+                        location.replace("http://127.0.0.1:5000/chat?id="+data.id);
+                    }
+                    else if(data.status == "no"){
+                        $('#result1').html('<div class="alert alert-danger" role="alert">얼굴이 일치하지 않습니다.</div>');
+                        $('#img').val('');
+                    }else if(data.status == "no_face"){
+                        $('#result1').html('<div class="alert alert-danger" role="alert">사진에 얼굴이 없습니다.</div>');
+
+                        $('#img').val('');
+                    }else if(data.status == "no_id"){
+                        $('#result1').html('<div class="alert alert-danger" role="alert">존재하지 않는 아이디 입니다.</div>');
+                        $('#img_id').val('');
+                        $('#img_id').focus();
+                    }else if(data.status == "blank_id"){
+                        $('#result1').html('<div class="alert alert-danger" role="alert">아이디를 입력해주세요.</div>');
+                        $('#img_id').focus();
+                    }
+                }
+            })
+        });
+
+    <!--로그인화면 변경-->
+        $('#ch_login1').click(function() {
+            $('#text').css('display', 'none');
+            $('#picture').css('display', 'block');
+        });
+
+        $('#ch_login2').click(function() {
+            $('#text').css('display', 'block');
+            $('#picture').css('display', 'none');
+        });
+
+    <!--이미지 추가 폼(input file) -->
+        $(":file").filestyle({input: false});
+
+
+    <!--아이디 중복확인-->
+        $('#check').click(function(){
+            var formData = new FormData();
+            formData.append('id', $("#signupid").val());
+            $.ajax({
+                url: "/check",
+                type:"POST",
+                dataType: "JSON",
+                contentType: false,
+                processData: false,
+                data: formData,
+                success: function(data){
+                    console.log(data);
+                    if (data.status == "no") {
+                        alert(data.id+"는 사용불가 합니다.");
+                        $('#signupid').val('');
+                    }else{
+                        alert(data.id+"는 사용가능 합니다.");
+                        $('#signup-id').attr('disabled',false);
+                    }
+
+                }
+            })
+        });
+
+    <!--이미지 미리보기-->
+        function PreviewImage() {
+            var oFReader = new FileReader();
+            oFReader.readAsDataURL(document.getElementById("img").files[0]);
+            oFReader.onload = function (oFREvent) {
+                document.getElementById("uploadPreview").src = oFREvent.target.result;
+            };
+        };
+
+    <!--회원가입시 중복확인 툴팁-->
+        $("[data-toggle='tooltip']").tooltip();
+
+    <!--회원가입 submit 할때 업로드 progress bar-->
+        (function() {
+            var bar = $('.progress-bar');
+            var percent = $('.percent');
+            var status = $('#status');
+            $('#form').ajaxForm({
+                beforeSend: function() {
+                    var percentVal = '0%';
+                    bar.width(percentVal)
+                    percent.html(percentVal);
+                },
+                uploadProgress: function(event, position, total, percentComplete) {
+                    var percentVal = percentComplete + '%';
+                    bar.width(percentVal)
+                    percent.html(percentVal);
+                    $('#wait').html('<div class="alert alert-danger" role="alert">잠시만 기다려주세요...</div>');
+                    //console.log(percentVal, position, total);
+                },
+                complete: function(xhr) {
+                    alert("회원가입이 완료되었습니다.");
+                    location.reload();
+                }
+            });
+        })();
+
+    </script>
+</body>
+</html>
