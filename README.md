@@ -2,6 +2,8 @@
 python flask를 이용한 채팅 웹 , opencv기반 얼굴인식 로그인 서비스
 WebServiceComputing
 
+
+
 1. 환경
 
   1.1 Anaconda 2.7
